@@ -3,10 +3,12 @@ import Sink from "./Sink"
 
 const Kitchen = (props) => {
   return (
-    <div>
+    <div className="stacked" id="kitchen">
+      <div>
+        <div id="oven">Oven</div>
+        <div id="sink">Sink</div>
+      </div>
       <h1>Kitchen</h1>
-      <div>Oven</div>
-      <div>Sink</div>
     </div>
   )
 }

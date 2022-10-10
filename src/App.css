@@ -1,5 +1,123 @@
+html {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* min-height - so that items on screen don't shrink and grow */
+  margin: 0;
+  font-family: sans-serif;
+  color:white;
+
+  /* height: 100vh; */
+  /* vh is view port height,so it adjusts when screen adjusts size */
+}
+
 div {
-  border: 1px solid grey;
-  margin: 5px;
-  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body > div {
+  width: 80%;
+  height: 80vh;
+  /* saying you want div to be 80% of body
+  if you use px, then it stays same size when screen shrinks/grows with flex box*/
+}
+
+.left > div {
+  width: 100%;
+}
+
+.left > .bath {
+  height: 30%;
+}
+
+.stacked {
+  flex-direction: column;
+}
+
+.bedroom {
+  background-color: #235D75;
+}
+
+.bath {
+  background-color: #607725;
+}
+
+#living-room {
+  background-color: #BD9B6F;
+}
+
+#kitchen {
+  background-color: #EE962E;
+  width: 20%
+}
+
+#oven {
+  background-color: #BB3213;
+}
+
+#sink {
+  background-color: #804310;
+}
+
+#living-room,
+.left {
+  width: 40%;
+}
+
+#top,
+#bottom {
+  width: 100%;
+  /* this is 100% of the 80% body */
+}
+
+#oven,
+#sink {
+  width: 50%;
+  height: 100%;
+}
+
+#top {
+  height: 60%;
+}
+
+#bottom {
+  height: 40%;
+}
+
+#bed1 {
+  height: 70%;
+}
+
+#kitchen > div:first-child {
+  width: 100%;
+  height: 10%;
+}
+
+#kitchen > div:last-child {
+  flex-grow: 80;
+  width: 100%;
+}
+
+#top > div,
+#bottom > div {
+  height: 100%;
+}
+
+#bottom > .bedroom {
+  width: 40%;
+}
+
+#bottom > .bath {
+  width: 20%;
 }

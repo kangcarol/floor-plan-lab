@@ -5,14 +5,20 @@ import Bath from "./Bath";
 
 const FloorPlan = (props) => {
   return (
-    <div>
-      <Bedroom bedNum={'1'}/>
-      <Kitchen />
-      <Bath size={'Full'} Bath />
-      <Bedroom bedNum={'2'}/>
-      <LivingRoom />
-      <Bath size={'Half'} Bath/>
-      <Bedroom bedNum={'3'} />
+    <div className="stacked">
+      <div id="top">
+        <div className="stacked left">
+          <Bedroom bedNum={'1'} id="bed1"/>
+          <Bath size={'Full'} Bath />
+        </div>
+        <LivingRoom />
+        <Kitchen />
+      </div>
+      <div id="bottom">
+        <Bedroom bedNum={'2'}/>
+        <Bath size={'Half'} Bath/>
+        <Bedroom bedNum={'3'} />
+      </div>
     </div>
   )
 }
