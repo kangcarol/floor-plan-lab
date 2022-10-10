@@ -1,6 +1,6 @@
 const Oven = (props) => {
   return (
-    <div>
+    <div id="oven">
       <h1>Oven</h1>
     </div>
   )
